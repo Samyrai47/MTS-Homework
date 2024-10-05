@@ -8,3 +8,5 @@ Designed system **"The Zoo"**.
 
 Defined one parent class Animal. This class have methods *move()* and *print()*. Both methods provide console output.
 Defined five subclasses: Horse, Tiger, Dolphin, Camel, Eagle. Each class has it's unique *eat()* method, which provides console output. As a parameter it takes enum Food, which saves programm from wrong input.
+# Third Homework
+Made CustomList, which refers to ArrayList. Have 2 classes, provided javadoc coverage.
