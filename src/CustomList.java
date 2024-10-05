@@ -1,14 +1,13 @@
 import java.util.Arrays;
-import java.util.Iterator;
 
 /**
  * Тип данных собственного производства. В качестве референса используется ArrayList
  *
  * @author Samyrai47
  */
-public class CustomList<A> implements Iterable<A>, Methods<A> {
-  /** Хранит параметризованный список */
-  private A[] list;
+public class CustomList<A> implements Methods<A> {
+  /** Хранит список элементов*/
+  private Object[] list;
 
   /** Хранит указание на свободный индекс */
   private int capacity;
@@ -16,12 +15,12 @@ public class CustomList<A> implements Iterable<A>, Methods<A> {
   /**
    * Создает CustomList
    *
-   * @param data параметризованный список (generic)
+   * @param data параметризованный список
    * @throws RuntimeException если хотя бы один элемент списка равен null
    */
-  public CustomList(A[] data) {
+  public CustomList(Object[] data) {
     boolean is_null = false;
-    for (A el : data) {
+    for (Object el : data) {
       if (el == null) {
         is_null = true;
         break;
@@ -112,15 +111,5 @@ public class CustomList<A> implements Iterable<A>, Methods<A> {
     } catch (ArrayIndexOutOfBoundsException e) {
       System.out.println("Index out of bounds");
     }
-  }
-
-  /**
-   * Переопределение итератора из Iterator. Функциональность неизвестна
-   *
-   * @deprecated
-   */
-  @Override
-  public Iterator<A> iterator() {
-    return null;
   }
 }
